@@ -1579,7 +1579,7 @@ def plot_field(field: str, data_path: str, file_nums, out_path: str,
 
             # Set colour bar min and max
             if centre_cmap:
-                datamax = np.amax(np.abs(data))
+                datamax = np.amax(np.abs(d))
                 vmin = -datamax
                 vmax = datamax
             else:
