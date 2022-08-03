@@ -144,7 +144,7 @@ def horizontal_correction(file: str, k: np.ndarray, y: np.ndarray):
         corrected wavenumbers and variable data
     """
     # Get number of sampled nodes
-    nmodes = np.loadtxt(file, dtype=int)[:,-1][0:k.size]
+    nmodes = np.loadtxt(file)[:,-1][0:k.size]
 
     # Calculate maximum horizontal wavenumber
     kt = int(max(k)/np.sqrt(2))
@@ -186,7 +186,7 @@ def total_correction(file: str, k: np.ndarray, y: np.ndarray):
         corrected wavenumbers and variable data
     """
     # Get number of sampled nodes
-    nmodes = np.loadtxt(file, dtype=int)[:,-1][0:k.size]
+    nmodes = np.loadtxt(file)[:,-1][0:k.size]
 
     # Calculate maximum horizontal wavenumber
     kt = int(max(k)/np.sqrt(3))
